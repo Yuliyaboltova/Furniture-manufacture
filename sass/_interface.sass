@@ -6,16 +6,36 @@ body
   +bold
   padding: 17px 22px
   font-size: 12px
-  border: 2px solid $primary
+  border: 2px solid $color-text-light
   text-transform: uppercase
-  color: $primary
+  color: #262626
+  background-color: #fff
+   
 .button
   padding: 25px 45px
   text-transform: uppercase
   border: none // отключили обводку
-  background-color: $primary
-  color:#ffff
+  background-color: #fff
+  color:#262626
   +bold
+
+@media   (max-width: 1023px)
+.button
+   padding: 20px  30px
+
+@media   (max-width: 576px)
+.button-o
+   font-size: 10px
+   
+   
+   
+
+
+
+
+
+
+
 
 
 

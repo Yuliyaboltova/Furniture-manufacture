@@ -1,85 +1,98 @@
 .navbar
-  position: fixed    // прибили navbar
-  left: 0
-  top: 0
-  width: 100%
-  background-color: #fff
-  &-wrap
-    min-height: 80px // высота 
-    display: flex
-    align-items: center
-    justify-content: space-between
-    
-  &_phone
-    display: block
-    font-size: 19px
-    text-decoration: none
-    margin-bottom: 5px
-    +bold
-    color: $color-text
-     
-  &_mobile, &_landline  
-    text-align: right //выравнивание по  правому краю
-         
-  &_small-text
-    font-size: 14px
-    text-decoration: none
-    display: block
-    color: $color-text-light
-        
+	position: fixed // прибили navbar
+	left: 0
+	top: 0
+	width: 100%
+	background-color: #fff
+	&-wrap
+		min-height: 84px // высота
+		display: flex
+		align-items: center
+		justify-content: space-between
 
-.menu    //кнопка с бургером
-  z-index: 0 // скрываем меню
-  transform:  translateY(-100%)// прячится на верх
-  transition: 0.2s
-  position: fixed    //прибеваем меню
-  top:80px
-  left: 0
-  width: 100%   
-  padding: 16px 0
-  background-color: $primary
+	&_phone
+		display: block
+		font-size: 19px
+		text-decoration: none
+		margin-bottom: 5px
+		+bold
+		color: #262626
 
-  &_active
-    transform: translateY(0)
+	&_mobile, &_landline
+		text-align: right //выравнивание по правому краю
 
-  &_link
-   font-size: 17px
-   text-decoration: none
-   text-transform: uppercase
-   color:#fff
+	&_small-text
+		font-size: 14px
+		text-decoration: none
+		display: block
+		color: $color-text-light
 
-  &_nav 
-    display: flex
-    justify-content: space-around
-    align-items: center
-   
-  &-button
-    display: flex
-    flex-direction: column 
-    align-items: center //бургер выравниваем 
-    justify-content: center
-    background-color: transparent // прозрачный  
-    border: none //чтоб не было полосок внизу и вверху 
-    border-right: 1px solid rgba( #510bba , 0.1) //полупрозрачная
-    border-left:  1px solid rgba( #510bba , 0.1)  // полоски вокруг бургера
-    height: 80px //высота кнопки 80px  те 100% от родителя
-    width: 70px
-    &_line
-      display: block
-      width: 20px
-      height: 3px
-      background-color: #89a9eb
-      margin: 2px 0 //расстояние между полосками бургера
+.menu	//кнопка с бургером
+	z-index: 0 // скрываем меню
+	transform: translateY(-100%)// прячится на верх
+	transition: 0.2s
+	position: fixed //прибеваем меню
+	top: 80px
+	left: 0
+	width: 100%
+	padding: 16px 0
+	background-color: #262626    //цвет минюшки
+
+	&_active
+	// transform: translateY(0)
+	&_link	
+		text-decoration: none
+		font-size: 19px
+		text-transform: uppercase
+		color: #fff
+	
+	&_nav
+		display: flex
+		justify-content: space-around
+		align-items: center
+
+	&-button
+		display: flex
+		flex-direction: column
+		align-items: center //бургер выравниваем
+		justify-content: center
+		background-color: transparent // прозрачный
+		border: none //чтоб не было полосок внизу и вверху
+		border-right: 1px solid rgba( #510bba , 0.1) //полупрозрачная
+		border-left: 1px solid rgba( #510bba , 0.1) // полоски вокруг бургера
+		height: 80px //высота кнопки 80px те 100% от родителя
+		width: 70px
+		&_line
+			display: block
+			width: 20px
+			height: 3px
+			background-color: $color-text-light
+			margin: 2px 0 //расстояние между полосками бургера
 .logo
-    &_text
-      display: block // чтоб занимать всю строчку
-      font-size: 18px
-      text-transform: uppercase // все заглавные
-      +bold
-      margin-bottom: 5px
-    &_deskription
-      display: block 
-      font-size: 14px
-      display: block
-      color: $color-text-light
-      
+	&_text
+		display: block // чтоб занимать всю строчку
+		font-size: 18px
+		text-transform: uppercase // все заглавные
+		+bold
+		margin-bottom: 5px
+	&_deskription
+		display: block
+		font-size: 14px
+		display: block
+		color: $color-text-light
+
+@media   (max-width: 991px)
+	.navbar
+		&_mobile, &_landline
+			display: none
+
+@media   (max-width: 576px)
+	.navbar
+		&_logo
+			display: none
+	.menu
+		//transform: translateY(0)       //проверяем выезжающее меню как мы его сформировали, потом в JS
+		&_nav
+			flex-direction: column
+		&_link
+			margin-bottom: 20px
