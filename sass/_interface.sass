@@ -6,37 +6,47 @@ body
   +bold
   padding: 17px 22px
   font-size: 12px
-  border: 2px solid $color-text-light
+  border: 2px solid $dark-grey
   text-transform: uppercase
-  color: #262626
+  color: $light-black
   background-color: #fff
-   
+
 .button
   padding: 25px 45px
   text-transform: uppercase
   border: none // отключили обводку
-  background-color: #fff
-  color:#262626
+  background-image: url('../img/Rectangle button2.png')
+  color: $light-black
   +bold
+
+.bg-secondary
+  background: #fff
+
+.input
+  height: 80px
+  border: 1px solid #dddddd
+
+.checkbox
+  display: none
+  &:checked +label:before
+    background-image: url('../img/Rectangle button1.png')
+  &-label
+    display: flex
+    align-items: center
+    margin-right: 40px
+    &:hover
+      cursor: pointer // при наведении на label курсор был пальчиком
+    &:before           // псевдокласс
+      content:''
+      width: 30px
+      height: 30px
+      border: 1px solid #939398
+      margin-right: 20px
 
 @media   (max-width: 1023px)
 .button
-   padding: 20px  30px
+  padding: 20px  20px
 
 @media   (max-width: 576px)
 .button-o
-   font-size: 10px
-   
-   
-   
-
-
-
-
-
-
-
-
-
-
-
+  font-size: 10px

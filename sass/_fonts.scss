@@ -7,7 +7,7 @@
     font-weight: normal;
     font-style: normal;
     }
-   @font-face {
+@font-face {
     font-family: 'Proxima Nova Light';
     src: url('../fonts/ProximaNova-Light.eot');
     src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
@@ -17,12 +17,41 @@
     font-style: normal;
     }
 
-   @mixin bold {
-      font-family: 'Proxima Nova Semibold', sans-serif;
-    }
-    
-   @mixin light {
-      font-family: 'Proxima Nova Light', sans-serif;
-    }
-    
-    
+@font-face {
+     font-family: 'History Pro 02';
+     src: url('../fonts/HistoryPro-Two.eot');
+     src: local('../History Pro 02'), local('../HistoryPro-Two'),
+          url('../fonts/HistoryPro-Two.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/HistoryPro-Two.woff2') format('woff2'),
+          url('../fonts/HistoryPro-Two.woff') format('woff'),
+          url('../fonts/HistoryPro-Two.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'History Pro Regular';
+     src: url('../fonts/HistoryPro-Two.eot');
+     src: url('../fonts/HistoryPro-Two.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/HistoryPro-Two.woff') format('woff'),
+          url('../fonts/HistoryPro-Two.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+     }
+
+
+@mixin bold {
+     font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+@mixin light {
+     font-family: 'Proxima Nova Light', sans-serif;
+}
+
+@mixin history {
+     font-family: 'History Pro 02', sans-serif;
+}
+
+@mixin historyPro {
+     font-family: 'History Pro Regular', sans-serif;
+}
